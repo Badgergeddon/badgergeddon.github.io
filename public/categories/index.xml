@@ -6,8 +6,6 @@
     <description>Recent content in Categories on Mr Plum&#39;s Linux diary</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
-    <webMaster>youremail@domain.com (Some Person)</webMaster>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
