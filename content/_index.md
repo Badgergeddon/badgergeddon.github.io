@@ -1,2 +1,4 @@
-## Front Page Content
-`beautifulhugo` supports content on your front page. Edit `/content/_index.md` to change what appears here. Delete `/content/_index.md` if you don't want any content here.
+## The Linux Diary
+`This is an experiemntal blog of Linux projects by Plum`.
+
+![Plum](/front/front.png)
