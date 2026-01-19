@@ -6,15 +6,8 @@
     <description>Recent content in Example on Mr Plum&#39;s Linux diary</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Mar 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/example/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Big Image Sample</title>
-      <link>http://localhost:1313/post/2017-03-07-bigimg-sample/</link>
-      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2017-03-07-bigimg-sample/</guid>
-      <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Code Sample</title>
       <link>http://localhost:1313/post/2016-03-08-code-sample/</link>

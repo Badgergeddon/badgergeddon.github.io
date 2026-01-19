@@ -1,4 +1,4 @@
-baseurl = "https://username.github.io"
+baseurl = "https://badgergeddon.github.io"
 DefaultContentLanguage = "en"
 title = "Mr Plum's Linux diary"
 # Using theme as git submodule
@@ -85,7 +85,7 @@ pygmentsCodefencesGuessSyntax = true
   # discord = "invite code (https://discord.gg/XXXXXXX)"
   # strava = "userid"
   lastfm = "PlumOcelot2020"
-  # bluesky = "username"
+  bluesky = "https://bsky.app/profile/plumocelot.bsky.social"
 
 [[menu.main]]
     name = "Blog"

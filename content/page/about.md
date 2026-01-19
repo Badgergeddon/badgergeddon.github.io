@@ -2,6 +2,7 @@
 title: About me
 subtitle: Linux Dabblings
 comments: false
+bigimg: [{src: "/img/Moonlight.jpg", desc: "Moonlight"}]
 ---
 
 I usually go by the name Plum here..
