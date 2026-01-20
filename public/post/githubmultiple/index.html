@@ -12,9 +12,9 @@
  
 
 
-      <title>Buho CMS - </title>
+      <title>Using multiple github accounts with ssh keys - </title>
 
-  <meta name="description" content="Buho CMS">
+  <meta name="description" content="Using multiple github accounts with ssh keys">
   <meta name="author" content="Plum"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -50,8 +50,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "http:\/\/localhost:1313\/post\/buho\/",
-          "name": "Buho cms"
+          "@id": "http:\/\/localhost:1313\/post\/githubmultiple\/",
+          "name": "Using multiple github accounts with SSH keys"
         }
     }]
 }
@@ -62,15 +62,15 @@
   "author": {
     "name" : "Plum"
   },
-  "headline": "Buho CMS",
-  "description" : "Buho CMS",
+  "headline": "Using multiple github accounts with ssh keys",
+  "description" : "Using multiple github accounts with ssh keys",
   "inLanguage" : "en",
-  "wordCount":  123 ,
-  "datePublished" : "2026-01-18T00:00:00\u002b00:00",
-  "dateModified" : "2026-01-18T00:00:00\u002b00:00",
+  "wordCount":  272 ,
+  "datePublished" : "2026-01-20T00:00:00\u002b00:00",
+  "dateModified" : "2026-01-20T00:00:00\u002b00:00",
   "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
-  "keywords" : [ "software" ],
-  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/buho\/",
+  "keywords" : [ "git, ssh, howto" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/githubmultiple\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "http:\/\/localhost:1313\/",
@@ -85,15 +85,15 @@
 </script>
 
 
-<meta property="og:title" content="Buho CMS" />
-<meta property="og:description" content="Buho CMS">
+<meta property="og:title" content="Using multiple github accounts with ssh keys" />
+<meta property="og:description" content="Using multiple github accounts with ssh keys">
 <meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
-<meta property="og:url" content="http://localhost:1313/post/buho/" />
+<meta property="og:url" content="http://localhost:1313/post/githubmultiple/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mr Plum&#39;s Linux diary" />
 
-  <meta name="twitter:title" content="Buho CMS" />
-  <meta name="twitter:description" content="Buho CMS">
+  <meta name="twitter:title" content="Using multiple github accounts with ssh keys" />
+  <meta name="twitter:description" content="Using multiple github accounts with ssh keys">
   <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -256,7 +256,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Buho CMS</h1>
+                <h1>Using multiple github accounts with ssh keys</h1>
               
               
               
@@ -264,13 +264,13 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 18, 2026
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2026
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;123&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;272&nbsp;words
   
   
     
@@ -296,17 +296,87 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>BuhoCMS is a local Content Management System for static site generators.</p>
-<p>See BuhoCMS as a GUI for static site generators. Easily create or open a website, choose your theme and add your first posts. With BuhoCMS, adding and editing content is as easy as a few clicks. No more terminal commands, folder hunting or manual Front matter edits</p>
-<p><img src="/posts/buho.png" alt="Buho"></p>
-<p>It&rsquo;s available on Flathub under POP OS so it just really needs Hugo installed and it&rsquo;s pretty much good to go. There are a few alpha bugs - &ldquo;Themes&rdquo; options is not quite working so you are better off setting up the nuts and bolts of the site under Hugo and then adding your chosen theme as a submodule. Hugo do a simple tutorial <a href="https://gohugo.io/getting-started/quick-start/">here</a></p>
+        <p>Using multiple github accounts with ssh keys.</p>
+<ol>
+<li>
+<p><a href="https://help.github.com/articles/generating-a-new-ssh-key/">Generate ssh key pairs for accounts</a> and <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">add them to GitHub accounts</a>.</p>
+</li>
+<li>
+<p>Edit/Create ssh config file (<code>~/.ssh/config</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Default github account: oanhnn
+</span></span><span class="line"><span class="cl">Host github.com
+</span></span><span class="line"><span class="cl">   HostName github.com
+</span></span><span class="line"><span class="cl">   IdentityFile ~/.ssh/oanhnn_private_key
+</span></span><span class="line"><span class="cl">   IdentitiesOnly yes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Other github account: superman
+</span></span><span class="line"><span class="cl">Host github-superman
+</span></span><span class="line"><span class="cl">   HostName github.com
+</span></span><span class="line"><span class="cl">   IdentityFile ~/.ssh/superman_private_key
+</span></span><span class="line"><span class="cl">   IdentitiesOnly yes
+</span></span></code></pre></div><blockquote>
+<p>NOTE: If you use any account frequently, you should use the default hostname (<code>github.com</code>).</p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-the-ssh-agent/">Add ssh private keys to your agent</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ssh-add ~/.ssh/oanhnn_private_key
+</span></span><span class="line"><span class="cl">$ ssh-add ~/.ssh/superman_private_key
+</span></span></code></pre></div></li>
+<li>
+<p>Test your connection</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts
+</span></span><span class="line"><span class="cl">$ ssh -T git@github.com
+</span></span><span class="line"><span class="cl">$ ssh -T git@github-superman
+</span></span></code></pre></div><p>If everything is OK, you will see these messages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Hi oanhnn! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Hi superman! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+</span></span></code></pre></div></li>
+<li>
+<p>Now all are set, you need remember</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git@github-superman:org/project.git =&gt; user is superman
+</span></span><span class="line"><span class="cl">git@github.com:org/project.git.     =&gt; user is oanhnn
+</span></span></code></pre></div></li>
+</ol>
+<ul>
+<li>If you need clone a repository, just do:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ git clone git@github-superman:org1/project1.git /path/to/project1
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> /path/to/project1
+</span></span><span class="line"><span class="cl">$ git config user.email <span class="s2">&#34;superman@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">$ git config user.name  <span class="s2">&#34;Super Man&#34;</span>
+</span></span></code></pre></div><ul>
+<li>If you already have the repo set up, after the ssh config instructions, you need change the URL of <code>origin</code>, just do:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd /path/to/project2
+</span></span><span class="line"><span class="cl">$ git remote set-url origin git@github-superman:org2/project2.git
+</span></span><span class="line"><span class="cl">$ git config user.email &#34;superman@example.com&#34;
+</span></span><span class="line"><span class="cl">$ git config user.name  &#34;Super Man&#34;
+</span></span></code></pre></div><ul>
+<li>If you are creating a new repository on local:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd /path/to/project3
+</span></span><span class="line"><span class="cl">$ git init
+</span></span><span class="line"><span class="cl">$ git remote add origin git@github-superman:org3/project3.git
+</span></span><span class="line"><span class="cl">$ git config user.email &#34;superman@example.com&#34;
+</span></span><span class="line"><span class="cl">$ git config user.name  &#34;Super Man&#34;
+</span></span><span class="line"><span class="cl">$ git add .
+</span></span><span class="line"><span class="cl">$ git commit -m &#34;Initial commit&#34;
+</span></span><span class="line"><span class="cl">$ git push -u origin master
+</span></span></code></pre></div><p>There&rsquo;s also <a href="https://github.com/csawai/git-identity-switcher">Git Identity Switcher</a> but I&rsquo;ve not really tried that yet.</p>
 
 
         
           <div class="blog-tags">
             
               
-              <a href="http://localhost:1313/tags/software/">software</a>&nbsp;
+              <a href="http://localhost:1313/tags/git/">git</a>&nbsp;
+            
+              
+              <a href="http://localhost:1313/tags/ssh/">ssh</a>&nbsp;
+            
+              
+              <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
             
           </div>
         
@@ -321,42 +391,42 @@
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fbuho%2f&amp;text=Buho%20CMS&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubmultiple%2f&amp;text=Using%20multiple%20github%20accounts%20with%20ssh%20keys&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fbuho%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubmultiple%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fbuho%2f&amp;title=Buho%20CMS" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubmultiple%2f&amp;title=Using%20multiple%20github%20accounts%20with%20ssh%20keys" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fbuho%2f&amp;title=Buho%20CMS" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubmultiple%2f&amp;title=Using%20multiple%20github%20accounts%20with%20ssh%20keys" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fbuho%2f&amp;title=Buho%20CMS" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubmultiple%2f&amp;title=Using%20multiple%20github%20accounts%20with%20ssh%20keys" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fbuho%2f&amp;description=Buho%20CMS" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubmultiple%2f&amp;description=Using%20multiple%20github%20accounts%20with%20ssh%20keys" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -370,19 +440,6 @@
 
         
           
-            
-          
-
-          
-                  <h4 class="see-also">See also</h4>
-                  <ul>
-                
-                
-                    <li><a href="/post/githubpages/">Github pages, custom domains and Cloudflare</a></li>
-                
-                    <li><a href="/post/pop_os/">POP!_OS</a></li>
-                
-              </ul>
 
           
         
@@ -392,7 +449,7 @@
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="http://localhost:1313/post/pop_os/" data-toggle="tooltip" data-placement="top" title="POP!_OS">&larr; Previous Post</a>
+              <a href="http://localhost:1313/post/buho/" data-toggle="tooltip" data-placement="top" title="Buho CMS">&larr; Previous Post</a>
             </li>
           
           

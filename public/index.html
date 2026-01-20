@@ -315,6 +315,79 @@ eg, mine was: baseurl = &ldquo;<a href="https://linux.plumocelot.uk">https://lin
 </article>
           
             <article class="post-preview">
+    <a href="http://localhost:1313/post/githubmultiple/">
+        <h2 class="post-title">Using multiple github accounts with ssh keys</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;272&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Using multiple github accounts with ssh keys.</p>
+<ol>
+<li>
+<p><a href="https://help.github.com/articles/generating-a-new-ssh-key/">Generate ssh key pairs for accounts</a> and <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">add them to GitHub accounts</a>.</p>
+</li>
+<li>
+<p>Edit/Create ssh config file (<code>~/.ssh/config</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Default github account: oanhnn
+</span></span><span class="line"><span class="cl">Host github.com
+</span></span><span class="line"><span class="cl">   HostName github.com
+</span></span><span class="line"><span class="cl">   IdentityFile ~/.ssh/oanhnn_private_key
+</span></span><span class="line"><span class="cl">   IdentitiesOnly yes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Other github account: superman
+</span></span><span class="line"><span class="cl">Host github-superman
+</span></span><span class="line"><span class="cl">   HostName github.com
+</span></span><span class="line"><span class="cl">   IdentityFile ~/.ssh/superman_private_key
+</span></span><span class="line"><span class="cl">   IdentitiesOnly yes
+</span></span></code></pre></div><blockquote>
+<p>NOTE: If you use any account frequently, you should use the default hostname (<code>github.com</code>).</p>
+        <a href="http://localhost:1313/post/githubmultiple/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/git/">git</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/ssh/">ssh</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="http://localhost:1313/post/buho/">
         <h2 class="post-title">Buho CMS</h2>
         
