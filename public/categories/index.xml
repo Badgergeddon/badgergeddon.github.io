@@ -6,6 +6,14 @@
     <description>Recent content in Categories on Mr Plum&#39;s Linux diary</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Howtos</title>
+      <link>http://localhost:1313/categories/howtos/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/howtos/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

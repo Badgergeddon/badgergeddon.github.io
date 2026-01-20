@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Mr Plum&#39;s Linux diary</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on Mr Plum&#39;s Linux diary</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github pages, custom domains and Cloudflare</title>
+      <link>http://localhost:1313/post/githubpages/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/githubpages/</guid>
+      <description>&lt;p&gt;The steps to getting this on &lt;a href=&#34;https://linux.plumocelot.uk&#34;&gt;https://linux.plumocelot.uk&lt;/a&gt; as oppposed to the github page url badgergeddon.github.io:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Set things up on Cloudflare with a CNAME reference linux.plumocelot.uk and point it to badgergeddon.github.io&lt;/li&gt;&#xA;&lt;li&gt;Select &amp;ldquo;DNS only&amp;rdquo; and not proxied for setting up otherwise ssl (https) will not work on github pages setup later.&lt;/li&gt;&#xA;&lt;li&gt;Go to your github pages repository and select settings&amp;gt;pages&lt;/li&gt;&#xA;&lt;li&gt;Enter your custom domain, e.g. mine  was &amp;ldquo;linux.plumocelot.uk&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;Save and hopefully your domain will resolve.&lt;/li&gt;&#xA;&lt;li&gt;You should now be able to &amp;ldquo;Enforce HTTPS&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;If using a github action to build and deploy (I am using Hugo here) then you need to edit your hugo.toml file in your repo to change the base domain:&#xA;eg, mine was: baseurl = &amp;ldquo;&lt;a href=&#34;https://linux.plumocelot.uk&#34;&gt;https://linux.plumocelot.uk&lt;/a&gt;&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;Run &amp;ldquo;Deploy Hugo site to Pages&amp;rdquo; workflow&lt;/li&gt;&#xA;&lt;li&gt;Enjoy your cheapskate website on your custom domain.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

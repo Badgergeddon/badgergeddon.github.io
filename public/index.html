@@ -249,6 +249,72 @@ This is an experiemntal blog of Linux projects by Plum.
           
           
             <article class="post-preview">
+    <a href="http://localhost:1313/post/githubpages/">
+        <h2 class="post-title">Github pages, custom domains and Cloudflare</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;133&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>The steps to getting this on <a href="https://linux.plumocelot.uk">https://linux.plumocelot.uk</a> as oppposed to the github page url badgergeddon.github.io:</p>
+<ol>
+<li>Set things up on Cloudflare with a CNAME reference linux.plumocelot.uk and point it to badgergeddon.github.io</li>
+<li>Select &ldquo;DNS only&rdquo; and not proxied for setting up otherwise ssl (https) will not work on github pages setup later.</li>
+<li>Go to your github pages repository and select settings&gt;pages</li>
+<li>Enter your custom domain, e.g. mine  was &ldquo;linux.plumocelot.uk&rdquo;</li>
+<li>Save and hopefully your domain will resolve.</li>
+<li>You should now be able to &ldquo;Enforce HTTPS&rdquo;</li>
+<li>If using a github action to build and deploy (I am using Hugo here) then you need to edit your hugo.toml file in your repo to change the base domain:
+eg, mine was: baseurl = &ldquo;<a href="https://linux.plumocelot.uk">https://linux.plumocelot.uk</a>&rdquo;</li>
+<li>Run &ldquo;Deploy Hugo site to Pages&rdquo; workflow</li>
+<li>Enjoy your cheapskate website on your custom domain.</li>
+</ol>
+
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/software/">software</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/hugo/">Hugo</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/gitgub/">Gitgub</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="http://localhost:1313/post/buho/">
         <h2 class="post-title">Buho CMS</h2>
         

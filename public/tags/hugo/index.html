@@ -12,9 +12,8 @@
  
 
 
-      <title>Overview of all pages with the tag #Tags - </title>
+      <title>Hugo - </title>
 
-  <meta name="description" content="Overview of all pages with the tag #Tags, such as: Gitgub">
   <meta name="author" content="Plum"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -36,13 +35,13 @@
 }
 </script>
 
-<meta property="og:title" content="Tags" />
+<meta property="og:title" content="Hugo" />
 <meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
-<meta property="og:url" content="http://localhost:1313/tags/" />
+<meta property="og:url" content="http://localhost:1313/tags/hugo/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mr Plum&#39;s Linux diary" />
 
-  <meta name="twitter:title" content="Tags" />
+  <meta name="twitter:title" content="Hugo" />
   <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -205,7 +204,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="tags-heading">
               
-                <h1>Tags</h1>
+                <h1>Hugo</h1>
               
               
                 <hr class="small">
@@ -222,116 +221,80 @@
 
 
     
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="posts-list">
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/githubpages/">
+        <h2 class="post-title">Github pages, custom domains and Cloudflare</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;133&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
 
 
+    </p>
+    <div class="post-entry">
+        
+        <p>The steps to getting this on <a href="https://linux.plumocelot.uk">https://linux.plumocelot.uk</a> as oppposed to the github page url badgergeddon.github.io:</p>
+<ol>
+<li>Set things up on Cloudflare with a CNAME reference linux.plumocelot.uk and point it to badgergeddon.github.io</li>
+<li>Select &ldquo;DNS only&rdquo; and not proxied for setting up otherwise ssl (https) will not work on github pages setup later.</li>
+<li>Go to your github pages repository and select settings&gt;pages</li>
+<li>Enter your custom domain, e.g. mine  was &ldquo;linux.plumocelot.uk&rdquo;</li>
+<li>Save and hopefully your domain will resolve.</li>
+<li>You should now be able to &ldquo;Enforce HTTPS&rdquo;</li>
+<li>If using a github action to build and deploy (I am using Hugo here) then you need to edit your hugo.toml file in your repo to change the base domain:
+eg, mine was: baseurl = &ldquo;<a href="https://linux.plumocelot.uk">https://linux.plumocelot.uk</a>&rdquo;</li>
+<li>Run &ldquo;Deploy Hugo site to Pages&rdquo; workflow</li>
+<li>Enjoy your cheapskate website on your custom domain.</li>
+</ol>
 
-<div class="container" role="main">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <article class="post-preview">
-      <div class="panel-group" id="accordion">
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseexample" data-parent="#accordion">
-                <div class="panel-heading" id="headerexample">
-                  <h4 class="panel-title">
-                      example
-                    <span class="badge">2</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapseexample" class="panel-collapse collapse">
-              <div class="panel-body">
-                
-                <a href="http://localhost:1313/tags/example/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/2016-03-08-code-sample/" class="list-group-item">Code Sample</a>
-                  
-                    <a href="http://localhost:1313/post/2015-02-20-test-markdown/" class="list-group-item">Test markdown</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+
+    
+    <div class="blog-tags">
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsesoftware" data-parent="#accordion">
-                <div class="panel-heading" id="headersoftware">
-                  <h4 class="panel-title">
-                      software
-                    <span class="badge">2</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsesoftware" class="panel-collapse collapse">
-              <div class="panel-body">
-                
-                <a href="http://localhost:1313/tags/software/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/buho/" class="list-group-item">Buho CMS</a>
-                  
-                    <a href="http://localhost:1313/post/pop_os/" class="list-group-item">POP!_OS</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+       
+       <a href="http://localhost:1313/tags/software/">software</a>&nbsp;
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsecode" data-parent="#accordion">
-                <div class="panel-heading" id="headercode">
-                  <h4 class="panel-title">
-                      code
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsecode" class="panel-collapse collapse">
-              <div class="panel-body">
-                
-                <a href="http://localhost:1313/tags/code/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/2016-03-08-code-sample/" class="list-group-item">Code Sample</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsemarkdown" data-parent="#accordion">
-                <div class="panel-heading" id="headermarkdown">
-                  <h4 class="panel-title">
-                      markdown
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsemarkdown" class="panel-collapse collapse">
-              <div class="panel-body">
-                
-                <a href="http://localhost:1313/tags/markdown/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/2015-02-20-test-markdown/" class="list-group-item">Test markdown</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+       
+       <a href="http://localhost:1313/tags/hugo/">Hugo</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+        </div>
         
       </div>
-    </article>
+    </div>
   </div>
-</div>
-
-
 
       <footer>
   <div class="container">
@@ -363,7 +326,7 @@
           
           
           <li>
-            <a href="/tags/index.xml" title="RSS">
+            <a href="/tags/hugo/index.xml" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

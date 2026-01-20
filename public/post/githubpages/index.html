@@ -12,9 +12,9 @@
  
 
 
-      <title>Overview of all pages with the tag #Tags - </title>
+      <title>Github pages, custom domains and Cloudflare - </title>
 
-  <meta name="description" content="Overview of all pages with the tag #Tags, such as: Gitgub">
+  <meta name="description" content="Github pages, custom domains and Cloudflare">
   <meta name="author" content="Plum"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -35,14 +35,65 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/post\/githubpages\/",
+          "name": "Github pages, custom domains and cloudflare"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Plum"
+  },
+  "headline": "Github pages, custom domains and Cloudflare",
+  "description" : "Github pages, custom domains and Cloudflare",
+  "inLanguage" : "en",
+  "wordCount":  133 ,
+  "datePublished" : "2026-01-20T00:00:00\u002b00:00",
+  "dateModified" : "2026-01-20T00:00:00\u002b00:00",
+  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+  "keywords" : [ "software, Hugo, Gitgub" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/githubpages\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="Tags" />
+
+<meta property="og:title" content="Github pages, custom domains and Cloudflare" />
+<meta property="og:description" content="Github pages, custom domains and Cloudflare">
 <meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
-<meta property="og:url" content="http://localhost:1313/tags/" />
+<meta property="og:url" content="http://localhost:1313/post/githubpages/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mr Plum&#39;s Linux diary" />
 
-  <meta name="twitter:title" content="Tags" />
+  <meta name="twitter:title" content="Github pages, custom domains and Cloudflare" />
+  <meta name="twitter:description" content="Github pages, custom domains and Cloudflare">
   <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -203,14 +254,33 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="tags-heading">
+            <div class="post-heading">
               
-                <h1>Tags</h1>
-              
-              
-                <hr class="small">
+                <h1>Github pages, custom domains and Cloudflare</h1>
               
               
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;133&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
               
             </div>
           </div>
@@ -222,116 +292,140 @@
 
 
     
-
-
-
 <div class="container" role="main">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <article class="post-preview">
-      <div class="panel-group" id="accordion">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>The steps to getting this on <a href="https://linux.plumocelot.uk">https://linux.plumocelot.uk</a> as oppposed to the github page url badgergeddon.github.io:</p>
+<ol>
+<li>Set things up on Cloudflare with a CNAME reference linux.plumocelot.uk and point it to badgergeddon.github.io</li>
+<li>Select &ldquo;DNS only&rdquo; and not proxied for setting up otherwise ssl (https) will not work on github pages setup later.</li>
+<li>Go to your github pages repository and select settings&gt;pages</li>
+<li>Enter your custom domain, e.g. mine  was &ldquo;linux.plumocelot.uk&rdquo;</li>
+<li>Save and hopefully your domain will resolve.</li>
+<li>You should now be able to &ldquo;Enforce HTTPS&rdquo;</li>
+<li>If using a github action to build and deploy (I am using Hugo here) then you need to edit your hugo.toml file in your repo to change the base domain:
+eg, mine was: baseurl = &ldquo;<a href="https://linux.plumocelot.uk">https://linux.plumocelot.uk</a>&rdquo;</li>
+<li>Run &ldquo;Deploy Hugo site to Pages&rdquo; workflow</li>
+<li>Enjoy your cheapskate website on your custom domain.</li>
+</ol>
+
+
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseexample" data-parent="#accordion">
-                <div class="panel-heading" id="headerexample">
-                  <h4 class="panel-title">
-                      example
-                    <span class="badge">2</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapseexample" class="panel-collapse collapse">
-              <div class="panel-body">
-                
-                <a href="http://localhost:1313/tags/example/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/2016-03-08-code-sample/" class="list-group-item">Code Sample</a>
-                  
-                    <a href="http://localhost:1313/post/2015-02-20-test-markdown/" class="list-group-item">Test markdown</a>
-                  
-                </div>
-              </div>
-            </div>
+          <div class="blog-tags">
+            
+              
+              <a href="http://localhost:1313/tags/software/">software</a>&nbsp;
+            
+              
+              <a href="http://localhost:1313/tags/hugo/">Hugo</a>&nbsp;
+            
+              
+              <a href="http://localhost:1313/tags/gitgub/">Gitgub</a>&nbsp;
+            
           </div>
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsesoftware" data-parent="#accordion">
-                <div class="panel-heading" id="headersoftware">
-                  <h4 class="panel-title">
-                      software
-                    <span class="badge">2</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsesoftware" class="panel-collapse collapse">
-              <div class="panel-body">
-                
-                <a href="http://localhost:1313/tags/software/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/buho/" class="list-group-item">Buho CMS</a>
-                  
-                    <a href="http://localhost:1313/post/pop_os/" class="list-group-item">POP!_OS</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsecode" data-parent="#accordion">
-                <div class="panel-heading" id="headercode">
-                  <h4 class="panel-title">
-                      code
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsecode" class="panel-collapse collapse">
-              <div class="panel-body">
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
                 
-                <a href="http://localhost:1313/tags/code/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/2016-03-08-code-sample/" class="list-group-item">Code Sample</a>
-                  
-                </div>
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubpages%2f&amp;text=Github%20pages%2c%20custom%20domains%20and%20Cloudflare&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubpages%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubpages%2f&amp;title=Github%20pages%2c%20custom%20domains%20and%20Cloudflare" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubpages%2f&amp;title=Github%20pages%2c%20custom%20domains%20and%20Cloudflare" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubpages%2f&amp;title=Github%20pages%2c%20custom%20domains%20and%20Cloudflare" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fgithubpages%2f&amp;description=Github%20pages%2c%20custom%20domains%20and%20Cloudflare" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
               </div>
-            </div>
-          </div>
+            </section>
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapsemarkdown" data-parent="#accordion">
-                <div class="panel-heading" id="headermarkdown">
-                  <h4 class="panel-title">
-                      markdown
-                    <span class="badge">1</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapsemarkdown" class="panel-collapse collapse">
-              <div class="panel-body">
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
                 
-                <a href="http://localhost:1313/tags/markdown/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="http://localhost:1313/post/2015-02-20-test-markdown/" class="list-group-item">Test markdown</a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+                
+                    <li><a href="/post/buho/">Buho CMS</a></li>
+                
+                    <li><a href="/post/pop_os/">POP!_OS</a></li>
+                
+              </ul>
+
+          
         
-      </div>
-    </article>
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/post/buho/" data-toggle="tooltip" data-placement="top" title="Buho CMS">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+      
+      
+      
+      
+        
+      
+
+    </div>
   </div>
 </div>
-
-
 
       <footer>
   <div class="container">
@@ -361,15 +455,6 @@
                 </a>
               </li>
           
-          
-          <li>
-            <a href="/tags/index.xml" title="RSS">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
           
           
         </ul>
