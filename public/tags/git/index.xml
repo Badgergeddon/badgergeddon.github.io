@@ -6,8 +6,15 @@
     <description>Recent content in Git on Mr Plum&#39;s Linux diary</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Missing Git Submodules?</title>
+      <link>http://localhost:1313/post/gitclonesubmodules/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gitclonesubmodules/</guid>
+      <description>&lt;p&gt;Here’s something I stumble over almost every time I clone a git repository with submodules.&lt;/p&gt;&#xA;&lt;p&gt;Those darn folders are empty and using the project fails. Here are two ways to fix that:&lt;/p&gt;&#xA;&lt;h2 id=&#34;clone-with-the-recursive-flag&#34;&gt;Clone With The Recursive Flag&lt;/h2&gt;&#xA;&lt;p&gt;When issuing your git clone, add a &lt;code&gt;--recursive&lt;/code&gt; flag. It will look like this:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone git@github.com:user/project.git --recursive&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And as easy as that, your submodules are there.&lt;/p&gt;&#xA;&lt;p&gt;If you cloned your repo and don’t mind starting over - delete the freshly cloned repository and add that &lt;code&gt;--recursive&lt;/code&gt; to the command.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Using multiple github accounts with ssh keys</title>
       <link>http://localhost:1313/post/githubmultiple/</link>

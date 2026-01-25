@@ -245,7 +245,7 @@
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;218&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;222&nbsp;words
   
   
     
@@ -259,7 +259,8 @@
     </p>
     <div class="post-entry">
         
-        <p>To mount a remote rsync.net filesystem in Linux, you can use the <code>rsync</code> command with the <code>--mount</code> option. This option allows you to mount a remote directory as a local filesystem, enabling you to access and manipulate files as if they were on a local disk.</p>
+        <p><a href="https://rsync.net/">Rysync.net rules for backups</a></p>
+<p>To mount a remote rsync.net filesystem in Linux, you can use the <code>rsync</code> command with the <code>--mount</code> option. This option allows you to mount a remote directory as a local filesystem, enabling you to access and manipulate files as if they were on a local disk.</p>
 <p>Here&rsquo;s an example command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rsync -avz --mount --remote-option<span class="o">=</span>--mount-options<span class="o">=</span><span class="nv">sync</span><span class="o">=</span>meta,attr rsync://username:password@rsync.net/path/to/remote/directory /local/mount/point
 </span></span></code></pre></div><p>Replace:</p>

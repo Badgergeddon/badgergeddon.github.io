@@ -12,9 +12,8 @@
  
 
 
-      <title>Mount a remote rsync.net filesystem in Linux - </title>
+      <title>Virtualization - </title>
 
-  <meta name="description" content="Mount a remote rsync.net filesystem in Linux">
   <meta name="author" content="Plum"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -35,65 +34,14 @@
   
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "http:\/\/localhost:1313\/",
-          "name": "home"
-        }
-    },{
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@id": "http:\/\/localhost:1313\/post\/rsyncfiles\/",
-          "name": "Mount a remote rsync.net filesystem in linux"
-        }
-    }]
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "Plum"
-  },
-  "headline": "Mount a remote rsync.net filesystem in Linux",
-  "description" : "Mount a remote rsync.net filesystem in Linux",
-  "inLanguage" : "en",
-  "wordCount":  222 ,
-  "datePublished" : "2026-01-25T00:00:00\u002b00:00",
-  "dateModified" : "2026-01-25T00:00:00\u002b00:00",
-  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
-  "keywords" : [ "rsync, storage, howto" ],
-  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/rsyncfiles\/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "http:\/\/localhost:1313\/",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
-        "height" :  60 ,
-        "width" :  60
-    }
-  }
-}
-</script>
 
-
-<meta property="og:title" content="Mount a remote rsync.net filesystem in Linux" />
-<meta property="og:description" content="Mount a remote rsync.net filesystem in Linux">
+<meta property="og:title" content="Virtualization" />
 <meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
-<meta property="og:url" content="http://localhost:1313/post/rsyncfiles/" />
+<meta property="og:url" content="http://localhost:1313/tags/virtualization/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mr Plum&#39;s Linux diary" />
 
-  <meta name="twitter:title" content="Mount a remote rsync.net filesystem in Linux" />
-  <meta name="twitter:description" content="Mount a remote rsync.net filesystem in Linux">
+  <meta name="twitter:title" content="Virtualization" />
   <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -254,33 +202,14 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
+            <div class="tags-heading">
               
-                <h1>Mount a remote rsync.net filesystem in Linux</h1>
-              
-              
+                <h1>Virtualization</h1>
               
               
-                <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;222&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
-    
-  
-  
-</span>
-
-
+                <hr class="small">
+              
+              
               
             </div>
           </div>
@@ -292,154 +221,75 @@
 
 
     
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <p><a href="https://rsync.net/">Rysync.net rules for backups</a></p>
-<p>To mount a remote rsync.net filesystem in Linux, you can use the <code>rsync</code> command with the <code>--mount</code> option. This option allows you to mount a remote directory as a local filesystem, enabling you to access and manipulate files as if they were on a local disk.</p>
-<p>Here&rsquo;s an example command:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rsync -avz --mount --remote-option<span class="o">=</span>--mount-options<span class="o">=</span><span class="nv">sync</span><span class="o">=</span>meta,attr rsync://username:password@rsync.net/path/to/remote/directory /local/mount/point
-</span></span></code></pre></div><p>Replace:</p>
-<ul>
-<li><code>username</code> and <code>password</code> with your actual rsync.net credentials</li>
-<li><code>rsync.net/path/to/remote/directory</code> with the actual path to the remote directory you want to mount</li>
-<li><code>/local/mount/point</code> with the desired local mount point</li>
-</ul>
-<p>The <code>--remote-option</code> flag specifies the <code>--mount-options</code> option, which configures the mount. In this example, <code>sync=meta,attr</code> enables metadata and attribute synchronization between the remote and local filesystems.</p>
-<p><strong>Notes:</strong></p>
-<ul>
-<li>Make sure you have the <code>rsync</code> package installed on your Linux system.</li>
-<li>Verify that your rsync.net account has the necessary permissions to access the remote directory.</li>
-<li>The <code>--mount</code> option is only available in rsync 3.2.3 and later versions.</li>
-<li>You may need to adjust the <code>--remote-option</code> and <code>--mount-options</code> flags depending on your specific use case and rsync.net configuration.</li>
-</ul>
-<p>After running the command, you should be able to access the remote filesystem at the specified local mount point. You can then use standard Linux commands (e.g., <code>ls</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>) to interact with the mounted filesystem. When you&rsquo;re finished, you can unmount the filesystem using the <code>umount</code> command.</p>
-
-
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-          <div class="blog-tags">
-            
-              
-              <a href="http://localhost:1313/tags/rsync/">rsync</a>&nbsp;
-            
-              
-              <a href="http://localhost:1313/tags/storage/">storage</a>&nbsp;
-            
-              
-              <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
-            
-          </div>
+        <div class="posts-list">
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/qemucopypaste/">
+        <h2 class="post-title">To enable copy-paste between a QEMU host and guest</h2>
         
-
         
-            <hr/>
-            <section id="social-share">
-              <div class="list-inline footer-links">
-                
+        
+    </a>
 
-<div class="share-box" aria-hidden="true">
-    <ul class="share">
-      
-      <li>
-        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2frsyncfiles%2f&amp;text=Mount%20a%20remote%20rsync.net%20filesystem%20in%20Linux&amp;via=" target="_blank" title="Share on Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
+    <p class="post-meta">
+        <span class="post-meta">
   
-      
-      <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2frsyncfiles%2f" target="_blank" title="Share on Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
   
-      
-      <li>
-        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2frsyncfiles%2f&amp;title=Mount%20a%20remote%20rsync.net%20filesystem%20in%20Linux" target="_blank" title="Share on Reddit">
-          <i class="fab fa-reddit"></i>
-        </a>
-      </li>
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
   
-      
-      <li>
-        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fpost%2frsyncfiles%2f&amp;title=Mount%20a%20remote%20rsync.net%20filesystem%20in%20Linux" target="_blank" title="Share on LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </li>
   
-      
-      <li>
-        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2frsyncfiles%2f&amp;title=Mount%20a%20remote%20rsync.net%20filesystem%20in%20Linux" target="_blank" title="Share on StumbleUpon">
-          <i class="fab fa-stumbleupon"></i>
-        </a>
-      </li>
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
-      
-      <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fpost%2frsyncfiles%2f&amp;description=Mount%20a%20remote%20rsync.net%20filesystem%20in%20Linux" target="_blank" title="Share on Pinterest">
-          <i class="fab fa-pinterest"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
   
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;298&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
 
-              </div>
-            </section>
+
+    </p>
+    <div class="post-entry">
         
-
+        <p>To enable copy-paste between a QEMU host and guest, install <code>spice-vdagent</code> (or guest tools) in the guest OS, ensure it&rsquo;s running, and use the SPICE display protocol for seamless clipboard sharing, often requiring the <code>virtio-serial</code> device and correct QEMU arguments in your setup. For Windows guests, you may also need to install VirtIO drivers, and for Linux guests, ensure the service starts correctly after X starts. </p>
+<p>For Linux Guests (e.g., Ubuntu, Fedora)</p>
+        <a href="http://localhost:1313/post/qemucopypaste/" class="post-read-more">[Read More]</a>
         
-          
-            
-          
+    </div>
 
-          
-                  <h4 class="see-also">See also</h4>
-                  <ul>
-                
-                
-                    <li><a href="/post/dockercheat/">Docker Cheat Sheet</a></li>
-                
-                    <li><a href="/post/dockerdowngrade/">Emergency Docker Downgrade</a></li>
-                
-                    <li><a href="/post/gitclonesubmodules/">Missing Git Submodules?</a></li>
-                
-                    <li><a href="/post/githubmultiple/">Using multiple github accounts with ssh keys</a></li>
-                
-              </ul>
-
-          
+    
+    <div class="blog-tags">
         
-      </article>
-
-      
-        <ul class="pager blog-pager">
-          
-            <li class="previous">
-              <a href="http://localhost:1313/post/githubpages/" data-toggle="tooltip" data-placement="top" title="Github pages, custom domains and Cloudflare">&larr; Previous Post</a>
-            </li>
-          
-          
-            <li class="next">
-              <a href="http://localhost:1313/post/gitclonesubmodules/" data-toggle="tooltip" data-placement="top" title="Missing Git Submodules?">Next Post &rarr;</a>
-            </li>
-          
-        </ul>
-      
-
-
-      
-      
-      
-      
-      
+       
+       <a href="http://localhost:1313/tags/qemu/">qemu</a>&nbsp;
         
-      
+       
+       <a href="http://localhost:1313/tags/software/">software</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/virtualization/">virtualization</a>&nbsp;
+         
+    </div>
+    
 
+</article>
+          
+        </div>
+        
+      </div>
     </div>
   </div>
-</div>
 
       <footer>
   <div class="container">
@@ -469,6 +319,15 @@
                 </a>
               </li>
           
+          
+          <li>
+            <a href="/tags/virtualization/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
           
           
         </ul>

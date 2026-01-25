@@ -212,7 +212,7 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2026
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutes
@@ -245,6 +245,278 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/dockercheat/">
+        <h2 class="post-title">Docker Cheat Sheet</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;117&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Docker Cheatsheet:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># pull/update an image
+</span></span><span class="line"><span class="cl">$ docker pull ghcr.io/shaarli/shaarli:release
+</span></span><span class="line"><span class="cl"># run a container from an image
+</span></span><span class="line"><span class="cl">$ docker run ghcr.io/shaarli/shaarli:latest
+</span></span><span class="line"><span class="cl"># list available images
+</span></span><span class="line"><span class="cl">$ docker images ls
+</span></span><span class="line"><span class="cl"># list running containers
+</span></span><span class="line"><span class="cl">$ docker ps
+</span></span><span class="line"><span class="cl"># list running AND stopped containers
+</span></span><span class="line"><span class="cl">$ docker ps -a
+</span></span><span class="line"><span class="cl"># run a command in a running container
+</span></span><span class="line"><span class="cl">$ docker exec -ti &lt;container-name-or-first-letters-of-id&gt; bash
+</span></span><span class="line"><span class="cl"># follow logs of a running container
+</span></span><span class="line"><span class="cl">$ docker logs -f &lt;container-name-or-first-letters-of-id&gt;
+</span></span><span class="line"><span class="cl"># delete unused images to free up disk space
+</span></span><span class="line"><span class="cl">$ docker system prune --images
+</span></span><span class="line"><span class="cl"># delete unused volumes to free up disk space (CAUTION all data in unused volumes will be lost)
+</span></span><span class="line"><span class="cl">$ docker system prune --volumes
+</span></span><span class="line"><span class="cl"># delete unused containers
+</span></span><span class="line"><span class="cl">$ docker system prune
+</span></span></code></pre></div>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/docker/">docker</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/dockerdowngrade/">
+        <h2 class="post-title">Emergency Docker Downgrade</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;121&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Docker update screws up <a href="https://casaos.zimaspace.com/">Casaos</a> or some other application on your server and you need a quick Docker Downgrade?</p>
+<p>I had the same issue and just downgraded docker back to 28.5.2 and it instantly fixed the issue.</p>
+<p>Here are the steps if you need them for ubuntu:</p>
+<ol>
+<li>Stop Docker</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo systemctl stop docker
+</span></span></code></pre></div><ol start="2">
+<li>Install the specific Docker version</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt install docker-ce<span class="o">=</span>5:28.5.2-1~ubuntu.24.04~noble <span class="se">\
+</span></span></span><span class="line"><span class="cl">                 docker-ce-cli<span class="o">=</span>5:28.5.2-1~ubuntu.24.04~noble <span class="se">\
+</span></span></span><span class="line"><span class="cl">                 containerd.io
+</span></span></code></pre></div><ol start="3">
+<li>Prevent Ubuntu from automatically upgrading Docker:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-mark hold docker-ce docker-ce-cli
+</span></span></code></pre></div><ol start="4">
+<li>Start Docker again</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo systemctl start docker
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> docker
+</span></span></code></pre></div><ol start="5">
+<li>Verify the version</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker --version
+</span></span></code></pre></div><p>You should see:</p>
+        <a href="http://localhost:1313/post/dockerdowngrade/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/docker/">docker</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/gitclonesubmodules/">
+        <h2 class="post-title">Missing Git Submodules?</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;167&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Here’s something I stumble over almost every time I clone a git repository with submodules.</p>
+<p>Those darn folders are empty and using the project fails. Here are two ways to fix that:</p>
+<h2 id="clone-with-the-recursive-flag">Clone With The Recursive Flag</h2>
+<p>When issuing your git clone, add a <code>--recursive</code> flag. It will look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ git clone git@github.com:user/project.git --recursive
+</span></span></code></pre></div><p>And as easy as that, your submodules are there.</p>
+<p>If you cloned your repo and don’t mind starting over - delete the freshly cloned repository and add that <code>--recursive</code> to the command.</p>
+        <a href="http://localhost:1313/post/gitclonesubmodules/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/git/">git</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/submodules/">submodules</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/rsyncfiles/">
+        <h2 class="post-title">Mount a remote rsync.net filesystem in Linux</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;222&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p><a href="https://rsync.net/">Rysync.net rules for backups</a></p>
+<p>To mount a remote rsync.net filesystem in Linux, you can use the <code>rsync</code> command with the <code>--mount</code> option. This option allows you to mount a remote directory as a local filesystem, enabling you to access and manipulate files as if they were on a local disk.</p>
+<p>Here&rsquo;s an example command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rsync -avz --mount --remote-option<span class="o">=</span>--mount-options<span class="o">=</span><span class="nv">sync</span><span class="o">=</span>meta,attr rsync://username:password@rsync.net/path/to/remote/directory /local/mount/point
+</span></span></code></pre></div><p>Replace:</p>
+<ul>
+<li><code>username</code> and <code>password</code> with your actual rsync.net credentials</li>
+<li><code>rsync.net/path/to/remote/directory</code> with the actual path to the remote directory you want to mount</li>
+<li><code>/local/mount/point</code> with the desired local mount point</li>
+</ul>
+<p>The <code>--remote-option</code> flag specifies the <code>--mount-options</code> option, which configures the mount. In this example, <code>sync=meta,attr</code> enables metadata and attribute synchronization between the remote and local filesystems.</p>
+        <a href="http://localhost:1313/post/rsyncfiles/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/rsync/">rsync</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/storage/">storage</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/howto/">howto</a>&nbsp;
+         
+    </div>
+    
+
+</article>
           
             <article class="post-preview">
     <a href="http://localhost:1313/post/githubpages/">
@@ -583,97 +855,16 @@ eg, mine was: baseurl = &ldquo;<a href="https://linux.plumocelot.uk">https://lin
 
 </article>
           
-            <article class="post-preview">
-    <a href="http://localhost:1313/post/2015-02-20-test-markdown/">
-        <h2 class="post-title">Test markdown</h2>
-        
-        <h3 class="post-subtitle">
-            Each post also has a subtitle
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 20, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;95&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>You can write regular <a href="https://markdowntutorial.com/">markdown</a> here and <a href="https://gohugo.io">Hugo</a> will automatically convert it to a nice webpage.  I strongly encourage you to <a href="https://markdowntutorial.com/">take 5 minutes to learn how to write in markdown</a> - it&rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.</p>
-<p><strong>Here is some bold text</strong></p>
-<h2 id="here-is-a-secondary-heading">Here is a secondary heading</h2>
-<p>Here&rsquo;s a useless table:</p>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left">Number</th>
-          <th style="text-align: left">Next number</th>
-          <th style="text-align: left">Previous number</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">Five</td>
-          <td style="text-align: left">Six</td>
-          <td style="text-align: left">Four</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">Ten</td>
-          <td style="text-align: left">Eleven</td>
-          <td style="text-align: left">Nine</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">Seven</td>
-          <td style="text-align: left">Eight</td>
-          <td style="text-align: left">Six</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">Two</td>
-          <td style="text-align: left">Three</td>
-          <td style="text-align: left">One</td>
-      </tr>
-  </tbody>
-</table>
-<p>How about a yummy crepe?</p>
-        <a href="http://localhost:1313/post/2015-02-20-test-markdown/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-       
-       <a href="http://localhost:1313/tags/example/">example</a>&nbsp;
-        
-       
-       <a href="http://localhost:1313/tags/markdown/">markdown</a>&nbsp;
-         
-    </div>
-    
-
-</article>
-          
         </div>
+        
+          <ul class="pager main-pager">
+            
+            
+              <li class="next">
+                <a href="http://localhost:1313/post/page/2/">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
         
       </div>
     </div>
