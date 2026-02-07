@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Files on Mr Plum&#39;s Linux diary</title>
+    <link>http://localhost:1313/tags/files/</link>
+    <description>Recent content in Files on Mr Plum&#39;s Linux diary</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/files/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cosmic Files</title>
+      <link>http://localhost:1313/post/cosmicdesktop/</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/cosmicdesktop/</guid>
+      <description>&lt;p&gt;COSMIC Files (the file manager for System76&amp;rsquo;s new&#xA;COSMIC Desktop Environment) is currently in alpha/beta development, and its Samba (SMB) support is a known area of active work with several reported issues.&#xA;If your Samba shares are broken or won&amp;rsquo;t connect, here are the most common causes and fixes:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Missing Dependencies&#xA;On some distributions, COSMIC Files requires specific backends to handle network protocols like SMB.&lt;/p&gt;&#xA;&lt;p&gt;Fix: Ensure you have the necessary gvfs packages installed. Users have reported that installing gvfs-smb or similar backends is required for Samba access to function in the file manager.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

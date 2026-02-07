@@ -35,10 +35,16 @@
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/qemu/</loc>
+    <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/rsync/</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/software/</loc>
+    <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/software/</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/storage/</loc>
@@ -48,6 +54,12 @@
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/qemucopypaste/</loc>
+    <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/virtualization/</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/gitgub/</loc>
@@ -63,9 +75,6 @@
     <lastmod>2026-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/software/</loc>
     <lastmod>2026-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ssh/</loc>
