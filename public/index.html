@@ -310,6 +310,61 @@ On some distributions, COSMIC Files requires specific backends to handle network
 </article>
           
             <article class="post-preview">
+    <a href="http://localhost:1313/post/gitsubmoduleshugo/">
+        <h2 class="post-title">Fixing Hugo Gallery and updating a Git Submodule</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 7, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;91&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> # fixing a submodule 
+</span></span><span class="line"><span class="cl">$ git submodule update --remote --merge 
+</span></span></code></pre></div><p>I use the Hugo gallery <a href="https://themes.gohugo.io/themes/hugo-theme-gallery/">theme</a></p>
+<p>It broke on my <a href="https://gallery.britishbogroll.uk/">britishbogroll</a> gallery which I think is due to an update to sasl which resizes/processes images and an obsolete reference.</p>
+<p>After a certain amount of faffing I re-pulled my repo and updated the git submodule - the theme which fixed it. As there are quite lot of pictures you sometimes have to be patient to alow Hugo to rebuild it which is probably how I broke it before.. See the invocation above!</p>
+
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/hugo/">hugo</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/git/">git</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="http://localhost:1313/post/dockercheat/">
         <h2 class="post-title">Docker Cheat Sheet</h2>
         
@@ -815,56 +870,6 @@ eg, mine was: baseurl = &ldquo;<a href="https://linux.plumocelot.uk">https://lin
 <p><img src="/posts/buho.png" alt="Buho"></p>
 <p>It&rsquo;s available on Flathub under POP OS so it just really needs Hugo installed and it&rsquo;s pretty much good to go. There are a few alpha bugs - &ldquo;Themes&rdquo; options is not quite working so you are better off setting up the nuts and bolts of the site under Hugo and then adding your chosen theme as a submodule. Hugo do a simple tutorial <a href="https://gohugo.io/getting-started/quick-start/">here</a></p>
 
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-       
-       <a href="http://localhost:1313/tags/software/">software</a>&nbsp;
-         
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="http://localhost:1313/post/pop_os/">
-        <h2 class="post-title">POP!_OS</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 18, 2026
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;500&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Plum
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>Pop OS is a free and open-source Linux distribution based on Ubuntu and developed by the American Linux computer manufacturer System76. It features the COSMIC desktop environment; a Rust-based and Wayland-only desktop created and maintained by System76.</p>
-<p><img src="/posts/pop.png" alt="POP!"></p>
-<p>POP uses COSMIC, a backronym for Computer Operating System Main Interface Components, is a free and open-source desktop environment for Linux and other Unix-like operating systems. COSMIC was originally the name of a modified version of GNOME made specifically for Pop!</p>
-        <a href="http://localhost:1313/post/pop_os/" class="post-read-more">[Read More]</a>
         
     </div>
 
